@@ -50,10 +50,11 @@
             	let latitud = temblores.features[x].geometry.coordinates[1];
             	let magnitud = temblores.features[x].properties.mag;
                 L.circle([latitud,longitud],{radius: Math.pow(10,magnitud),stroke:false,fillColor:'#A60E3C',fillOpacity:0.4}).addTo(miMapa);
-                L.popup()
-                .setLatLng([latitud, longitud]
-                .setContent(magnitud()))
-                .addTo(miMapa);
+         /*           L.popUp()
+        .setLatLng([latitud,longitud])
+        .setContent("Terremoto de" + magniud + "grados")
+        .openOn(mymap);  LO INTENTÉ :C
+*/
             }//acá se cierra el ciclo for que va agregando circulos a miMapa
 
         }//acá se cierra el function setup de p5.js
